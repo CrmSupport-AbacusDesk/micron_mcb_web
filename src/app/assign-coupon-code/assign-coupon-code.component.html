@@ -1,0 +1,91 @@
+
+
+
+
+
+<div class="gift-box">
+  <div class="model-head">
+    <p>Assign Coupon</p>
+    
+  </div>
+
+    <div class="trans pt15">
+      <mat-dialog-content class="mat-typography mat-model">
+
+        <div class="option-field">
+          <div class="row mb0">
+
+            <div class="cs-input cs-multi-select">
+             
+          </div>
+            </div>
+        </div>
+        <div class="option-field">
+
+
+          <div class="row mb0">
+            <div class="col s12 pl10">
+              <div class="control-field">
+                <mat-form-field class="cs-input">
+                  <input matInput  placeholder="Coupon Code" [(ngModel)]="data.coupon_code" disabled>
+                </mat-form-field>
+              </div>
+            </div>
+            
+        </div>
+          <div class="row mb0">
+            <div class="col s12 pl10">
+              <div class="control-field">
+                <mat-form-field class=" cs-input cs-multi-select">
+                  <mat-label>Select Type</mat-label>
+                  <mat-select  [(ngModel)] = "data.user_type" #user_type="ngModel" name="user_type"  (selectionChange)="getKariger(data.user_type,'')" required>
+                      <mat-option value ="1" >Electrician</mat-option>
+                      <mat-option value ="2" >Dealer</mat-option>
+                  </mat-select>
+              </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+        <div class="row mb0" *ngIf="data.user_type">
+          <div class="col s12 pr10">
+              
+            <div class="control-field">
+              <mat-form-field class=" cs-input cs-multi-select">
+                <mat-select placeholder="Karigar" name="karigar" [(ngModel)]="data.karigar_id" #Karigar="ngModel" 
+                required>
+                
+                <mat-option >
+                  <ngx-mat-select-search  noEntriesFoundLabel="'no data found'"  placeholderLabel="Search.."  (keyup)="getKariger(data.user_type,$event.target.value)"></ngx-mat-select-search>
+                </mat-option>
+                
+                <mat-option *ngFor="let pc of karigar;" value={{pc.karigar_id}}
+                >
+                {{pc.full_name}} - ({{pc.mobile_no}})
+              </mat-option> 
+              </mat-select>
+            </mat-form-field>
+          </div>
+          
+          
+          
+        </div>
+        </div>
+      </div>
+      </mat-dialog-content>
+      <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="primary"  class="bt_pr save" (click)="assignCoupon()" [disabled]="!data.karigar_id || savingData == true" cdkFocusInitial>Save</button>
+      </mat-dialog-actions>
+    </div>
+  </div>
+
+
+
+
+
+  
