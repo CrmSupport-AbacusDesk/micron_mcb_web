@@ -1,0 +1,48 @@
+ .model {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    width: 450px;
+}
+
+
+.sprate-box .off .detail-field span.spn_dtl {
+    line-height: 32px;
+}
+
+.pn_er {
+    color: red;
+}
+
+
+.sprate-box {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    padding: 0px 10px;
+    /* margin-bottom: 40px; */
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+.hdr_wdt {
+    width: 400px;
+}
+.lft_sd {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+}
+button.grn_btn.mat-button {
+    bottom: 65px !important;
+}
+
+.gst-nm {
+    color: red;
+}
