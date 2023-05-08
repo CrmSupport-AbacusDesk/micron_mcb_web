@@ -69,11 +69,7 @@ export class SubcategoryListComponent implements OnInit {
      
      this.loading_list = false; 
      this.sub_categories = d.sub_category;
-     console.log(d.sub_category);
-     
-     console.log(this.sub_categories);
-     
-     console.log( this.sub_categories.image );
+    
      
    });
  }

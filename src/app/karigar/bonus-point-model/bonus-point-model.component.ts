@@ -25,8 +25,6 @@ export class BonusPointModelComponent implements OnInit {
     
     assign_points()
     {
-        console.log(this.karigar_data);
-        console.log(this.point);
         this.loading = true;
         this.db.post_rqst({"point":this.point,"karigar_id":this.karigar_data.id,"summary":this.summary},"karigar/bonus_points")
         .subscribe(resp=>{

@@ -10,12 +10,12 @@
                 <mat-icon>arrow_back</mat-icon>
               </button>
             <h1>Master / Product Category / {{category_name}}</h1>
-            <!-- <div class="input-field">
-                <input type="text" placeholder="Search..." [(ngModel)]="filter.search"  (keyup.enter)="current_page = 1; getCategoryList()">
+            <div class="input-field">
+                <input type="text" placeholder="Search..." [(ngModel)]="filter.search"  (keyup.enter)="current_page = 1; getSubCategoryList()">
                 <i class="material-icons">
                     search
                 </i>
-            </div> -->
+            </div>
         </div>
         <div class="left-auto">
           <a  mat-icon-button (click)="getSubCategoryList()">
